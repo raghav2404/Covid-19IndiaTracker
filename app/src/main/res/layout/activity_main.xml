@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeToRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:text="India Covid-19 \n Tracker " />
+
+
+    <TextView
+        android:id="@+id/lastUpdatedTv"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="viewEnd"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/dark_green"
+        android:text="Last Updated " />
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_below="@id/titleTv"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirmed"
+                android:textAllCaps="true"
+                android:textColor="@color/dark_red"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_virus"
+                android:tint="@color/dark_red" />
+
+            <TextView
+                android:id="@+id/confirmedTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="@color/dark_red"
+                android:textSize="18sp"
+
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active"
+                android:textAllCaps="true"
+                android:textColor="@color/dark_blue"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_patient"
+                android:tint="@color/dark_blue" />
+
+            <TextView
+                android:id="@+id/activeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="@color/dark_blue"
+                android:textSize="18sp"
+
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recovered"
+                android:textAllCaps="true"
+                android:textColor="@color/dark_green"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_heart"
+                android:tint="@color/dark_green" />
+
+            <TextView
+                android:id="@+id/recoveredTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="@color/dark_green"
+                android:textSize="18sp"
+
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deceased"
+                android:textAllCaps="true"
+                android:textColor="@color/dark_yellow"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_death"
+                android:tint="@color/dark_yellow" />
+
+            <TextView
+                android:id="@+id/deceasedTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="@color/dark_yellow"
+                android:textSize="18sp"
+
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_below="@id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/lastUpdatedTv"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="	#FF4500"
+        android:text="R"
+        tools:layout_alignParentEnd="true"
+        tools:layout_marginBottom="32dp" />
+
+
+</RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
