@@ -10,6 +10,9 @@ Fetched the last updated time on a seperate thread using coroutines. Displayed t
 IDE:
 Android Studio
 
+Api:
+https://api.covid19india.org/data.json
+
 Languages Used:
 Kotlin 
 Java
